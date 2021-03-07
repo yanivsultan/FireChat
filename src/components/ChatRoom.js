@@ -33,6 +33,7 @@ const ChatRoom = ({firebase}) => {
     return (
         <div>
             <h2>Chat Room</h2>
+            <button onClick={()=>auth.signOut()} >Sign Out</button>
             {messages && messages.map(msg=> <ChatMessage key={msg.id} message={msg} auth={auth} />)}
 
             <form onSubmit={sendMessage}>
