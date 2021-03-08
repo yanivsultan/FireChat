@@ -1,0 +1,24 @@
+.ChatMessage{
+        display: flex;
+        font-size: 16px;
+        padding: 10px;
+        width: fit-content;
+        border-radius: 10px;
+        background-color: #ffffff;
+        margin-bottom: 30px;
+        color: #34383D;
+        justify-content: center;
+        align-items: center;
+        max-width: 45%
+}
+.ChatMessage > img{
+    width: 30px;
+    border-radius: 50%;
+}
+.ChatMessage > .Message{
+    margin-left: 20px;
+}
+.MessageRecieved{
+        margin-left: auto;
+        background-color: #dcf8c6;  
+}
