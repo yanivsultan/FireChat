@@ -1,5 +1,24 @@
-button{
-    border: none;
-    background-color: red;
-    letter-spacing: 10px;
+.SignIn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.SignIn > button{
+    border: 3px solid white;
+    background-color: white;
+    padding: 20px;
+    letter-spacing: 3px;
+    margin-top: 20px;
+    font-weight: 900;
+    color: #34383D;
+    cursor: pointer;
+}
+
+.SignIn > button:hover{
+    background-color: #34383D;
+    color: white;
+    border: 3px solid white;
 }

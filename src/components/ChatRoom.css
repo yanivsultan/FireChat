@@ -1,0 +1,51 @@
+.ChatRoom{
+    min-height: 100vh;
+}
+
+.RoomHeader{
+    display: flex;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    background-color: #34383D;
+    padding: 20px;
+    border-bottom: 3px solid rgb(77, 77, 77);
+    justify-content: space-between;
+}
+
+
+/* .RoomMessages{
+
+} */
+
+
+.RoomFooter{
+    display: flex;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    bottom: 0;
+    border-top: 3px solid rgb(77, 77, 77);
+    background-color: #34383D;
+    padding: 20px;
+}
+
+.RoomFooter > form{
+    display: flex;
+    width: 100%;
+}
+.RoomFooter > form > input{
+    width: 90%;
+    outline-width: 0;
+    border: none;
+    border-radius: 20px 0 0 20px;
+    padding: 10px;
+}
+.RoomFooter > form > button{
+    width: 10%;
+    outline-width: 0;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    padding: 10px;
+    cursor: pointer;
+    background-color: rgb(226, 226, 226);
+}

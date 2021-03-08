@@ -28,8 +28,6 @@ const [ user ] = useAuthState(auth)
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Welcome to Yaniv`s Chat app</h1>
-        <p>The app is a real time chat app, You can go ahead and log-in with your google account.</p>
         {user ? <ChatRoom firebase={firebase}/> : <SignIn auth={auth} />}
       </header>
     </div>
