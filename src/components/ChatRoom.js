@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { useCollectionData } from "react-firebase-hooks/firestore";
 import ChatMessage from "../ChatMessage";
 import "./ChatRoom.css";
@@ -13,6 +13,8 @@ const ChatRoom = ({ firebase }) => {
 
   const [formValue, setFormValue] = useState("");
 
+  const dummy = useRef()
+
   const sendMessage = async (e) => {
     e.preventDefault();
     const { uid, photoURL } = auth.currentUser;
@@ -25,6 +27,7 @@ const ChatRoom = ({ firebase }) => {
     });
 
     setFormValue("");
+    dummy.current.scrollIntoView({behavior: 'smooth'});
   };
 
   return (
@@ -40,6 +43,7 @@ const ChatRoom = ({ firebase }) => {
             <ChatMessage key={msg.id} message={msg} auth={auth} />
           ))}
       </div>
+      <div ref={dummy}></div>
       <div className="RoomFooter">
         <form onSubmit={sendMessage}>
           <input
